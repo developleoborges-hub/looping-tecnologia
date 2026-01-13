@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping Tecnologia | Desenvolvimento Criativo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="imagens/looping tecnologia.png" alt="Logo Looping Tecnologia">
+    </a>
+
+    <nav class="nav" id="nav-menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#planos">Planos</a>
+      <a href="#clientes">Portfólio</a>
+      <a href="#fotografos">Fotógrafos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Criatividade e tecnologia em looping.</h1>
+      <p>Desenvolvemos sites e sistemas personalizados para micro e pequenos negócios — com design moderno, desempenho e suporte contínuo.</p>
+      <a href="#planos" class="btn">Conheça nossos planos</a>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Transformamos ideias em presença digital.</h2>
+      <p>
+        A Looping Tecnologia é especializada em <strong>micro e pequenos negócios</strong>, profissionais autônomos e criativos.
+        Acreditamos que cada projeto deve ter identidade própria, por isso trabalhamos linha por linha com atenção a cada detalhe do design e da experiência.
+      </p>
+      <p>
+        Acompanhamos todo o processo: concepção, design, publicação e manutenção, garantindo segurança, desempenho e evolução constante.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section id="diferenciais" class="diferenciais">
+    <div class="container">
+      <h2>Projetos acelerados por I.A.</h2>
+      <p>
+        Utilizamos softwares de última geração impulsionados por Inteligência Artificial, tornando os processos mais ágeis e assertivos.
+        Além disso, nossos processos de revisão de código, manutenções e atualizações é ainda mais eficiente graças a I.A. em pontos cruciais do desenvolvimento.
+      </p>
+      <p>
+       Desfrute de suporte personalizado e humanizado sempre que quiser.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PLANOS ===== -->
+  <section id="planos" class="planos">
+    <div class="container">
+      <h2>Modelo de Negócio Simples e Justo</h2>
+      <p>Sem custo inicial de setup — você só paga a mensalidade do plano escolhido.</p>
+
+      <div class="planos-grid">
+        <div class="plano-card">
+          <h3>Plano Essencial</h3>
+          <p>Ideal para quem quer presença digital com design profissional e suporte contínuo.</p>
+          <span class="preco">A partir de R$ 49/mês</span>
+        </div>
+        <div class="plano-card destaque">
+          <h3>Plano Avançado</h3>
+          <p>Inclui otimização SEO, atualizações mensais e pequenas melhorias contínuas.</p>
+          <span class="preco">A partir de R$ 99/mês</span>
+        </div>
+        <div class="plano-card">
+          <h3>Plano Premium</h3>
+          <p>Projetos complexos com áreas administrativas, integrações e manutenção prioritária.</p>
+          <span class="preco">A partir de R$ 199/mês</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENTES / PORTFÓLIO ===== -->
+  <section id="clientes" class="clientes">
+    <div class="container">
+      <h2>Alguns Clientes e Projetos</h2>
+      <div class="logos">
+        <img src="imagens/logo-em-branco-png.png" alt="Mari Vieira Fotografia">
+      
+        <img src="imagens/logofaxinei-removebg-preview.png" alt="Faxinei">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOOPING PARA FOTÓGRAFOS ===== -->
+  <section id="fotografos" class="fotografos">
+    <div class="container">
+      <h2>Looping para Fotógrafos 📸</h2>
+      <p>
+        Soluções personalizadas para fotógrafos que querem elevar a experiência de seus clientes:
+        galerias interativas, seleção de fotos, entrega automatizada e portfólios incríveis.
+      </p>
+      <a href="pagina-fotografos.html" class="btn">Saiba mais</a>
+    </div>
+  </section>
+
+  <!-- ===== FORMULÁRIO DE CONTATO ===== -->
+<!-- ===== FORMULÁRIO DE CONTATO ===== -->
+<section id="contato" class="contato">
+  <div class="container">
+    <h2>Entre em Contato</h2>
+    <p>Preencha o formulário abaixo e entrarei em contato para entender seu projeto.</p>
+
+    <form
+  action="https://formsubmit.co/loopingtecnologia@gmail.com"
+  method="POST"
+  id="contatoForm"
+>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="">
+
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="ramo">Ramo de Negócio:</label>
+    <input type="text" id="ramo" name="ramo">
+  </div>
+
+  <div class="form-group">
+    <label for="plano">Plano Desejado:</label>
+    <select id="plano" name="plano">
+      <option value="Essencial">Essencial</option>
+      <option value="Avançado">Avançado</option>
+      <option value="Premium">Premium</option>
+      <option value="Customizado">Projeto Customizado 100%</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn-enviar">Enviar</button>
+
+  <!-- Mensagem de status -->
+  <div id="mensagemStatus" class="mensagem-status"></div>
+</form>
+
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-logo">
+      <img src="imagens/lopping_png-removebg-preview.png" alt="Looping Tecnologia Logo">
+      <p>Desenvolvimento criativo, design e tecnologia para pequenos negócios.</p>
+    </div>
+
+    <div class="footer-contato">
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:loopingtecnologia@gmail.com">loopingtecnologia@gmail.com</a></li>
+        <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5541999999999" target="_blank">(41) 99999-9999</a></li>
+        <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/seu-perfil" target="_blank">Looping Tecnologia</a></li>
+        <li><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/loopingtecnologia" target="_blank">@loopingtecnologia</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Looping Tecnologia — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
