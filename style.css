@@ -44,7 +44,7 @@ p {
   z-index: 100;
   transition: background 0.4s ease, border-color 0.4s ease;
   height: 130px; /* força altura padrão */
-  overflow: hidden; /* impede que a logo “estoure” a altura */
+  overflow: visible; /* impede que a logo “estoure” a altura */
 }
 
 .header.scrolled {
@@ -142,7 +142,7 @@ p {
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 65vh;
+  min-height: 82vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,6 +150,7 @@ p {
   background: linear-gradient(135deg, #1a1a1a, #111, #0a0a0a);
   padding-top: 70px; /* exato mesmo valor da altura do header */
   margin-bottom: 0;  /* elimina espaçamento inferior oculto */
+  margin-top: 100px;
 }
 
 
