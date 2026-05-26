@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gestor de RH | Looping Tecnologia</title>
+  <meta name="description" content="Projeto de sistema para gestão de documentos de colaboradores, holerites, exames, comunicados e acessos internos com foco em segurança e praticidade." />
+  <meta name="keywords" content="gestor de RH, sistema de documentos RH, portal do colaborador, PWA RH, Looping Tecnologia" />
+  <meta name="author" content="Leonardo Borges" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Gestor de RH | Portal de documentos para colaboradores" />
+  <meta property="og:description" content="Uma solução para empresas organizarem documentos, comunicados e acessos de colaboradores de forma segura." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://loopingtecnologia.com.br/projeto-gestor-rh.html" />
+  <meta property="og:image" content="https://loopingtecnologia.com.br/looping_tecnologia-removebg-preview.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gestor de RH | Portal de documentos para colaboradores" />
+  <meta name="twitter:description" content="Uma solução para empresas organizarem documentos, comunicados e acessos de colaboradores de forma segura." />
+  <meta name="twitter:image" content="https://loopingtecnologia.com.br/looping_tecnologia-removebg-preview.png" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <meta name="theme-color" content="#11162f" />
+</head>
+<body id="top" class="page-project page-rh">
+<header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Voltar para a página inicial da Looping Tecnologia">
+        <img src="looping_tecnologia-removebg-preview.png" alt="Looping Tecnologia" />
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#diferenciais">Diferenciais</a>
+        <a href="index.html#clientes">Clientes</a>
+        <a href="index.html#projetos">Projetos</a>
+        <a href="loopingparafotografos.html">Fotógrafos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="#contato" class="header-cta">Conversar sobre este projeto</a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="mainNav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-home section-glow">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-id-card-clip"></i> Gestor de RH</span>
+          <h1>Um portal simples para organizar documentos e acessos de colaboradores.</h1>
+          <p>
+            O Gestor de RH é uma solução pensada para empresas que precisam disponibilizar holerites, exames, comunicados, escalas e arquivos internos para cada colaborador, com acesso individual e organização centralizada.
+          </p>
+          <div class="hero-actions">
+            <a href="#modulos" class="btn btn-primary">Ver possibilidades</a>
+            <a href="#contato" class="btn btn-ghost">Quero uma versão para minha empresa</a>
+          </div>
+          <div class="hero-badges" aria-label="Principais benefícios">
+            <span><i class="fa-solid fa-user-lock"></i> Acesso individual</span>
+            <span><i class="fa-solid fa-file-shield"></i> Documentos</span>
+            <span><i class="fa-solid fa-mobile-screen"></i> PWA mobile</span>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal reveal-delay-1" aria-label="Demonstração visual do projeto">
+          <div class="orbit-card orbit-card-one">
+            <i class="fa-solid fa-folder-open"></i>
+            <strong>Arquivos por pessoa</strong>
+            <span>cada colaborador visualiza apenas o que é dele.</span>
+          </div>
+          <div class="hero-device">
+            <div class="device-topbar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="device-content">
+              <div class="device-line w-80"></div>
+              <div class="device-line w-55"></div>
+              <div class="device-cards">
+                <div></div><div></div><div></div>
+              </div>
+              <div class="device-chart">
+                <span style="height: 36%"></span>
+                <span style="height: 62%"></span>
+                <span style="height: 78%"></span>
+                <span style="height: 54%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="orbit-card orbit-card-two">
+            <i class="fa-solid fa-lock"></i>
+            <strong>Controle de acesso</strong>
+            <span>permissões e áreas protegidas desde o início.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <span class="eyebrow">O problema</span>
+          <h2>Documento importante espalhado vira retrabalho para todo mundo.</h2>
+        </div>
+        <div class="section-text reveal reveal-delay-1">
+          <p>
+            Muitas empresas ainda enviam arquivos sensíveis por WhatsApp, e-mail ou links soltos. Isso dificulta o controle, aumenta o risco de erro e deixa o colaborador dependente de alguém do RH para encontrar documentos simples.
+          </p>
+          <p>
+            A proposta do Gestor de RH é criar um ambiente privado, responsivo e fácil de usar, em que o administrador envia documentos e cada colaborador acessa apenas os próprios arquivos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="modulos" class="section darker-section">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">Módulos possíveis</span>
+          <h2>Uma base segura para documentos, comunicados e rotina interna.</h2>
+          <p>O sistema pode começar como portal de documentos e crescer para uma plataforma interna de RH.</p>
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card reveal">
+            <div class="icon-bubble"><i class="fa-solid fa-users-gear"></i></div>
+            <h3>Cadastro de colaboradores</h3>
+            <p>Criação de usuários, dados básicos, cargo, setor, status e permissões de acesso.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-1">
+            <div class="icon-bubble"><i class="fa-solid fa-file-arrow-up"></i></div>
+            <h3>Upload de documentos</h3>
+            <p>Envio de holerites, exames, contratos, comprovantes, comunicados e arquivos por colaborador.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-2">
+            <div class="icon-bubble"><i class="fa-solid fa-user-shield"></i></div>
+            <h3>Área do colaborador</h3>
+            <p>Cada funcionário acessa sua própria área para visualizar e baixar documentos autorizados.</p>
+          </article>
+
+          <article class="module-card reveal">
+            <div class="icon-bubble"><i class="fa-solid fa-key"></i></div>
+            <h3>Primeiro acesso seguro</h3>
+            <p>Fluxo para troca de senha no primeiro login e autenticação protegida para dados sensíveis.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-1">
+            <div class="icon-bubble"><i class="fa-solid fa-bullhorn"></i></div>
+            <h3>Comunicados internos</h3>
+            <p>Publicação de avisos, orientações e informações importantes para todos ou para grupos específicos.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-2">
+            <div class="icon-bubble"><i class="fa-solid fa-chart-simple"></i></div>
+            <h3>Painel administrativo</h3>
+            <p>Visão de usuários, documentos enviados, pendências e controle geral da operação de RH.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">Experiência</span>
+          <h2>Do lado do colaborador, precisa ser simples. Do lado da empresa, precisa ser controlado.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span>01</span>
+            <h3>Admin cria acesso</h3>
+            <p>O colaborador é cadastrado com permissão e status definidos.</p>
+          </div>
+          <div class="timeline-item reveal reveal-delay-1">
+            <span>02</span>
+            <h3>Documento é enviado</h3>
+            <p>O RH seleciona o usuário e vincula o arquivo correto.</p>
+          </div>
+          <div class="timeline-item reveal reveal-delay-2">
+            <span>03</span>
+            <h3>Colaborador acessa</h3>
+            <p>Ele entra pelo celular ou computador e visualiza seus documentos.</p>
+          </div>
+          <div class="timeline-item reveal reveal-delay-3">
+            <span>04</span>
+            <h3>Empresa mantém controle</h3>
+            <p>O painel ajuda a organizar acessos, arquivos e rotina de envio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section clients-section">
+      <div class="container">
+        <div class="customization-card reveal">
+          <span class="eyebrow">Aplicações</span>
+          <h2>Ideal para empresas que querem reduzir ruído operacional.</h2>
+          <p>
+            Pode ser usado por pequenas empresas, escritórios, operações locais, indústrias leves, equipes externas e negócios que precisam centralizar documentos sem criar uma estrutura complexa demais.
+          </p>
+          <div class="custom-tags">
+            <span>Holerites</span>
+            <span>Exames</span>
+            <span>Contratos</span>
+            <span>Comunicados</span>
+            <span>Escalas</span>
+            <span>Documentos internos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow"><i class="fa-brands fa-whatsapp"></i> Próximo passo</span>
+          <h2>Quer entender como isso poderia funcionar no seu negócio?</h2>
+          <p>
+            Essa página mostra uma visão de possibilidades. A proposta final pode ser montada de forma modular, começando simples e evoluindo conforme a operação amadurece.
+          </p>
+          <div class="contact-highlights">
+            <span><i class="fa-solid fa-puzzle-piece"></i> Módulos personalizáveis</span>
+            <span><i class="fa-solid fa-shield-halved"></i> Estrutura segura</span>
+            <span><i class="fa-solid fa-rocket"></i> Evolução por etapas</span>
+          </div>
+        </div>
+
+        <div class="customization-card reveal reveal-delay-1">
+          <span class="eyebrow">Vamos conversar</span>
+          <h2>Me conte sua ideia e eu organizo o caminho possível.</h2>
+          <p>
+            A Looping pode adaptar esse conceito para uma versão mais enxuta, uma versão completa ou um projeto totalmente sob medida.
+          </p>
+          <div class="custom-tags">
+            <span>Diagnóstico inicial</span>
+            <span>Escopo modular</span>
+            <span>Interface responsiva</span>
+            <span>Publicação e manutenção</span>
+          </div>
+          <a href="https://wa.me/5541999722511?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Looping%20Tecnologia%20e%20quero%20conversar%20sobre%20o%20projeto%20Gestor%20de%20RH.%0A%0AQuero%20entender%20uma%20vers%C3%A3o%20para%20organizar%20documentos%20e%20acessos%20de%20colaboradores." target="_blank" rel="noopener" class="btn btn-primary">
+            Chamar no WhatsApp <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Voltar para a página inicial">
+          <img src="looping_tecnologia-removebg-preview.png" alt="Looping Tecnologia" />
+        </a>
+        <p>Desenvolvimento web criativo, seguro e personalizado para pequenos negócios, profissionais e produtos digitais.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navegação</h3>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#diferenciais">Diferenciais</a>
+        <a href="index.html#clientes">Clientes</a>
+        <a href="index.html#projetos">Projetos</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Projetos</h3>
+        <a href="projeto-erp-confeiteiros.html">ERP Confeiteiros</a>
+        <a href="projeto-gestor-rh.html">Gestor de RH</a>
+        <a href="projeto-faxinei.html">Faxinei</a>
+        <a href="projeto-programa-viagens.html">Programa de Viagens</a>
+        <a href="loopingparafotografos.html">Looping para Fotógrafos</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contato</h3>
+        <a href="mailto:loopingtecnologia@gmail.com"><i class="fa-solid fa-envelope"></i> loopingtecnologia@gmail.com</a>
+        <a href="https://wa.me/5541999722511" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> (41) 99972-2511</a>
+        <a href="https://instagram.com/loopingtecnologia" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @loopingtecnologia</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Looping Tecnologia — Todos os direitos reservados.</p>
+      <span>Feito em Curitiba/PR • tecnologia, design e um pouco de café.</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5541999722511?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Looping%20Tecnologia%20e%20quero%20conversar%20sobre%20um%20projeto." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

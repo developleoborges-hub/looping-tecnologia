@@ -1,113 +1,173 @@
-// ===== SCROLL ANIMATION =====
-const sections = document.querySelectorAll("section");
+// =========================================================
+// LOOPING TECNOLOGIA — SCRIPT GLOBAL
+// Substitua TODO o seu script.js por este arquivo.
+// Ele funciona tanto no index.html quanto em loopingparafotografos.html.
+// =========================================================
 
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = window.scrollY;
-    const offset = sec.offsetTop - 400;
-    const height = sec.offsetHeight;
-    if (top >= offset && top < offset + height) {
-      sec.classList.add("show");
-    }
-  });
-});
+const siteHeader = document.getElementById("siteHeader");
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
 
-// ===== MENU SCROLL TO =====
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
+// Header com efeito ao rolar
+function updateHeader() {
+  if (!siteHeader) return;
 
-// ===== MENU MOBILE =====
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-  menuToggle.classList.toggle("active");
-});
-
-// Animação do botão hambúrguer
-menuToggle.addEventListener("click", () => {
-  const spans = menuToggle.querySelectorAll("span");
-  spans[0].classList.toggle("rotate1");
-  spans[1].classList.toggle("hide");
-  spans[2].classList.toggle("rotate2");
-});
-
-// ===== HEADER TRANSPARÊNCIA DINÂMICA =====
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
+  if (window.scrollY > 24) {
+    siteHeader.classList.add("scrolled");
   } else {
-    header.classList.remove("scrolled");
+    siteHeader.classList.remove("scrolled");
+  }
+}
+
+window.addEventListener("scroll", updateHeader);
+window.addEventListener("load", updateHeader);
+
+// Menu mobile
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("show");
+    menuToggle.classList.toggle("active", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("show");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+// Fecha menu ao clicar fora
+window.addEventListener("click", (event) => {
+  if (!mainNav || !menuToggle) return;
+
+  const clickedInsideMenu = mainNav.contains(event.target);
+  const clickedToggle = menuToggle.contains(event.target);
+
+  if (!clickedInsideMenu && !clickedToggle) {
+    mainNav.classList.remove("show");
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
   }
 });
 
-// ===== FORMULÁRIO DE CONTATO =====
-document.getElementById("contatoForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// Animações de entrada
+const revealElements = document.querySelectorAll(".reveal");
 
-  const nome = document.getElementById("nome").value;
-  const telefone = document.getElementById("telefone").value;
-  const ramo = document.getElementById("ramo").value;
-  const plano = document.getElementById("plano").value;
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16 }
+  );
 
-  const assunto = `Novo contato de ${nome}`;
-  const corpo = `
-Nome: ${nome}
-Telefone: ${telefone}
-Ramo de negócio: ${ramo}
-Plano desejado: ${plano}
-`;
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("visible"));
+}
 
-  const mailtoLink = `mailto:contato@loopingtecnologia.com.br?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
-  window.location.href = mailtoLink;
+// Scroll suave para âncoras internas, sem quebrar links externos ou páginas .html
+const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+internalLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+
+    if (!href || href === "#") return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 });
 
-// ===== FORMULÁRIO DE CONTATO COM MENSAGEM DE SUCESSO =====
-const form = document.getElementById("contatoForm");
+// Formulário do index.html via FormSubmit
+const contatoForm = document.getElementById("contatoForm");
 const mensagemStatus = document.getElementById("mensagemStatus");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+function setStatus(message, type) {
+  if (!mensagemStatus) return;
 
-  // cria objeto com os dados do formulário
-  const formData = new FormData(form);
+  mensagemStatus.textContent = message;
+  mensagemStatus.className = `form-status show ${type}`;
+}
 
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
+if (contatoForm && mensagemStatus) {
+  contatoForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    if (response.ok) {
-      // mensagem de sucesso
-      mensagemStatus.textContent = "✅ Mensagem enviada com sucesso! Entraremos em contato em breve.";
-      mensagemStatus.className = "mensagem-status sucesso";
-      mensagemStatus.style.opacity = "1";
+    const submitButton = contatoForm.querySelector('button[type="submit"]');
+    const originalText = submitButton ? submitButton.textContent : "";
 
-      // limpa formulário
-      form.reset();
-
-      // esconde a mensagem após alguns segundos
-      setTimeout(() => {
-        mensagemStatus.style.opacity = "0";
-      }, 5000);
-    } else {
-      throw new Error("Erro no envio");
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Enviando...";
     }
-  } catch (error) {
-    mensagemStatus.textContent = "❌ Ocorreu um erro ao enviar. Tente novamente mais tarde.";
-    mensagemStatus.className = "mensagem-status erro";
-    mensagemStatus.style.opacity = "1";
-  }
-});
+
+    try {
+      const formData = new FormData(contatoForm);
+
+      const response = await fetch(contatoForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Falha no envio do formulário.");
+      }
+
+      contatoForm.reset();
+      setStatus("Mensagem enviada com sucesso. Vou te responder em breve!", "success");
+    } catch (error) {
+      setStatus("Não consegui enviar por aqui. Me chame pelo WhatsApp no botão verde.", "error");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    }
+  });
+}
+
+// Formulário da página Looping para Fotógrafos: abre WhatsApp com texto pronto
+const leadForm = document.getElementById("leadForm");
+
+if (leadForm) {
+  leadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nome = document.getElementById("nomeFoto")?.value.trim();
+    const whatsapp = document.getElementById("whatsappFoto")?.value.trim();
+    const tipo = document.getElementById("tipoFoto")?.value || "Não informado";
+    const modulos = document.getElementById("modulosFoto")?.value || "Não informado";
+    const mensagem = document.getElementById("mensagemFoto")?.value.trim();
+
+    const numeroDestino = "5541999722511";
+
+    const texto = `Olá! Vim pela página Looping para Fotógrafos.
+
+Nome: ${nome || "Não informado"}
+WhatsApp: ${whatsapp || "Não informado"}
+Tipo de fotografia: ${tipo}
+Módulos de interesse: ${modulos}
+
+Mensagem:
+${mensagem || "Quero entender como montar uma solução personalizada para meu trabalho como fotógrafo."}`;
+
+    const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+}

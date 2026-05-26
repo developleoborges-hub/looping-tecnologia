@@ -2,240 +2,367 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Site Profissional para Fotógrafos</title>
-  <link rel="stylesheet" href="stylefoto.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Looping para Fotógrafos | Site e Sistema Personalizável</title>
+  <meta name="description" content="Looping para Fotógrafos é uma solução personalizável para fotógrafos: site profissional, portfólio, agenda, contratos, seleção de fotos, entrega final, CRM e financeiro conforme a necessidade do estúdio." />
+  <meta name="keywords" content="site para fotógrafos, sistema para fotógrafos, galeria de fotos, seleção de fotos, entrega de fotos, contratos para fotógrafos, agenda para fotógrafos" />
+  <meta name="author" content="Leonardo Borges" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Looping para Fotógrafos | Site e Sistema Personalizável" />
+  <meta property="og:description" content="Uma solução sob medida para fotógrafos organizarem portfólio, agenda, seleção, entrega e relacionamento com clientes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://loopingtecnologia.com.br/loopingparafotografos.html" />
+  <meta property="og:image" content="https://loopingtecnologia.com.br/looping_tecnologia-removebg-preview.png" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <meta name="theme-color" content="#11162f" />
 </head>
-<body>
+<body id="top" class="page-fotografos">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Voltar para a página inicial da Looping Tecnologia">
+        <img src="looping_tecnologia-removebg-preview.png" alt="Looping Tecnologia" />
+      </a>
 
-  <!-- HEADER -->
-<header>
-  <img src="looping_tecnologia-removebg-preview.png"/>
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#produto">Produto</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#personalizacao">Personalização</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-</header>
-  <!-- HERO -->
-<section class="hero">
-  <div class="container animate">
-    <h1>O site e o sistema que organizam, vendem e valorizam seu trabalho como fotógrafo</h1>
-    <p>
-      Site profissional + agenda, contratos, seleção e entrega de fotos.
-      Tudo feito sob medida para fotógrafos.
-    </p>
-    <a href="#planos" class="btn">Quero meu site profissional</a>
-  </div>
-</section>
+      <a href="#contato" class="header-cta">Montar meu sistema</a>
 
-
-  <!-- DOR -->
-  <section class="dor">
-    <div class="container">
-      <h2>Você se identifica com isso?</h2>
-      <ul>
-        <li>📱 Agenda perdida no WhatsApp</li>
-        <li>📄 Contratos improvisados</li>
-        <li>☁️ Fotos entregues por Google Drive</li>
-        <li>💸 Nenhum controle financeiro</li>
-        <li>🌐 Site bonito que não vende</li>
-      </ul>
-      <p class="destaque">
-        Você não é desorganizado.  
-        Só nunca teve um sistema feito para fotógrafos.
-      </p>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="mainNav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </section>
+  </header>
 
-  <!-- SOLUÇÃO -->
-  <section class="solucao">
-    <div class="container">
-      <h2>Um sistema completo para fotógrafos profissionais</h2>
-
-      <div class="card">
-        <div class="card animate">
-          <h3>🖥️ Site Personalizado</h3>
-          <p>Design único, feito para o seu estilo fotográfico.</p>
+  <main>
+    <section class="hero hero-photo section-glow">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-camera-retro"></i> Looping para Fotógrafos</span>
+          <h1>Um site e sistema modular para valorizar seu trabalho e organizar a experiência do cliente.</h1>
+          <p>
+            Um produto 100% personalizável para fotógrafos: você escolhe os módulos que fazem sentido para seu momento, do portfólio até seleção, entrega, contratos, agenda, CRM e financeiro.
+          </p>
+          <div class="hero-actions">
+            <a href="#modulos" class="btn btn-primary">Ver módulos possíveis</a>
+            <a href="#contato" class="btn btn-ghost">Solicitar conversa</a>
+          </div>
+          <div class="hero-badges">
+            <span><i class="fa-solid fa-images"></i> Galerias</span>
+            <span><i class="fa-solid fa-calendar-check"></i> Agenda</span>
+            <span><i class="fa-solid fa-file-signature"></i> Contratos</span>
+          </div>
         </div>
 
-        <div class="card animate">
-          <h3>📅 Agenda Inteligente</h3>
-          <p>Eventos organizados, lembretes e integração.</p>
-        </div>
-
-        <div class="card animate">
-          <h3>🖼️ Seleção de Fotos</h3>
-          <p>Galeria com marca d’água e seleção pelo cliente.</p>
-        </div>
-
-        <div class="card animate">
-          <h3>📦 Entrega Profissional</h3>
-          <p>Downloads individuais ou em ZIP.</p>
-        </div>
-
-        <div class="card animate">
-          <h3>📄 Contratos Automáticos</h3>
-          <p>Contratos em PDF gerados automaticamente.</p>
-        </div>
-
-        <div class="card animate">
-          <h3>📊 Financeiro + CRM</h3>
-          <p>Controle total do seu negócio fotográfico.</p>
+        <div class="photo-showcase reveal reveal-delay-1" aria-label="Prévia visual do produto para fotógrafos">
+          <div class="photo-card photo-card-main">
+            <div class="photo-toolbar"><span></span><span></span><span></span></div>
+            <div class="photo-preview"></div>
+            <div class="photo-info">
+              <strong>Galeria do cliente</strong>
+              <span>seleção, favoritos e entrega em uma área elegante.</span>
+            </div>
+          </div>
+          <div class="photo-mini-card mini-one">
+            <i class="fa-solid fa-check"></i>
+            <span>Fotos escolhidas</span>
+          </div>
+          <div class="photo-mini-card mini-two">
+            <i class="fa-solid fa-lock"></i>
+            <span>Acesso protegido</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PLANOS -->
-  <section class="planos" id="planos">
-    <div class="container">
-      <h2>Escolha seu plano</h2>
-
-      <div class="planos-grid">
-        <div class="plano">
-          <h3>Essencial</h3>
-          <span class="preco">R$ 39/mês</span>
-          <ul>
-            <li>Site institucional</li>
-            <li>Portfólio</li>
-            <li>Agenda</li>
-          </ul>
-          <a href="#contato" class="btn secundario scroll-btn" data-plano="Essencial">Começar</a>
+    <section id="produto" class="section about-section">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <span class="eyebrow">O produto</span>
+          <h2>Não é um template engessado. É uma base personalizada para a rotina do fotógrafo.</h2>
         </div>
-
-        <div class="plano destaque">
-          <h3>Profissional</h3>
-          <span class="preco">R$ 199/mês</span>
-          <ul>
-            <li>Site completo</li>
-            <li>Seleção de fotos</li>
-            <li>Entrega de fotos</li>
-            <li>Contratos</li>
-            <li>Agenda integrada</li>
-          </ul>
-          <a href="#contato" class="btn scroll-btn" data-plano="Profissional">  Plano mais escolhido</a>
-        </div>
-
-        <div class="plano">
-          <h3>Estúdio</h3>
-          <span class="preco">R$ 349/mês</span>
-          <ul>
-            <li>Tudo do Profissional</li>
-            <li>Financeiro completo</li>
-            <li>CRM de vendas</li>
-            <li>Nota fiscal</li>
-            <li>Posts para redes sociais</li>
-          </ul>
-          <a href="#contato" class="btn secundario scroll-btn" data-plano="Estúdio">  Falar com especialista</a>
+        <div class="section-text reveal reveal-delay-1">
+          <p>
+            A ideia do Looping para Fotógrafos é reunir presença digital e organização em uma solução única. O fotógrafo pode começar com um site profissional e evoluir para módulos mais completos conforme a demanda crescer.
+          </p>
+          <p>
+            Em vez de vender planos fechados, a proposta é montar um projeto coerente com seu fluxo de trabalho, seu tipo de fotografia, seu volume de clientes e seu nível de necessidade operacional.
+          </p>
         </div>
       </div>
+    </section>
+
+    <section class="section pain-section darker-section">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">Onde ele ajuda</span>
+          <h2>Para fotógrafos que querem parar de depender só de WhatsApp, Drive e improviso.</h2>
+        </div>
+
+        <div class="pain-grid">
+          <article class="pain-card reveal">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>Agenda perdida em conversas</h3>
+            <p>Eventos, informações e combinados espalhados em mensagens dificultam a organização.</p>
+          </article>
+          <article class="pain-card reveal reveal-delay-1">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <h3>Entrega sem experiência</h3>
+            <p>Links soltos não passam a mesma percepção de cuidado que uma galeria própria.</p>
+          </article>
+          <article class="pain-card reveal reveal-delay-2">
+            <i class="fa-solid fa-file-circle-question"></i>
+            <h3>Contratos e processos manuais</h3>
+            <p>Documentos, aprovações e etapas podem virar um fluxo mais claro e profissional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modulos" class="section modules-section">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">Módulos personalizáveis</span>
+          <h2>Você escolhe o que entra no projeto. O sistema cresce junto com o estúdio.</h2>
+          <p>Alguns módulos podem ser criados no começo; outros podem entrar em fases futuras.</p>
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card reveal">
+            <div class="icon-bubble"><i class="fa-solid fa-desktop"></i></div>
+            <h3>Site institucional</h3>
+            <p>Home, sobre, portfólio, propostas, contato e páginas pensadas para transmitir autoridade.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-1">
+            <div class="icon-bubble"><i class="fa-solid fa-images"></i></div>
+            <h3>Galerias e portfólio</h3>
+            <p>Organização de trabalhos, histórias, categorias e páginas especiais para eventos.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-2">
+            <div class="icon-bubble"><i class="fa-solid fa-heart-circle-check"></i></div>
+            <h3>Seleção de fotos</h3>
+            <p>Cliente acessa a galeria, escolhe as fotos e acompanha limite contratado e extras.</p>
+          </article>
+
+          <article class="module-card reveal">
+            <div class="icon-bubble"><i class="fa-solid fa-box-open"></i></div>
+            <h3>Entrega final</h3>
+            <p>Área para visualização de previews e botão para baixar o trabalho final conforme o fluxo escolhido.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-1">
+            <div class="icon-bubble"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3>Agenda</h3>
+            <p>Eventos, ensaios, prazos, etapas de edição, entregas e organização da rotina.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-2">
+            <div class="icon-bubble"><i class="fa-solid fa-file-contract"></i></div>
+            <h3>Contratos e propostas</h3>
+            <p>Geração de PDFs, campos editáveis e estrutura para padronizar documentos comerciais.</p>
+          </article>
+
+          <article class="module-card reveal">
+            <div class="icon-bubble"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Financeiro</h3>
+            <p>Controle de entradas, custos, pagamentos, status de contrato e visão do resultado mensal.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-1">
+            <div class="icon-bubble"><i class="fa-solid fa-user-group"></i></div>
+            <h3>CRM de clientes</h3>
+            <p>Histórico, contatos, aniversários, preferências e acompanhamento comercial.</p>
+          </article>
+
+          <article class="module-card reveal reveal-delay-2">
+            <div class="icon-bubble"><i class="fa-solid fa-gear"></i></div>
+            <h3>Admin personalizado</h3>
+            <p>Painel para editar banners, trabalhos, depoimentos, blog, galerias e conteúdos do site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section experience-section darker-section">
+      <div class="container two-column align-center">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Experiência do cliente</span>
+          <h2>Seu cliente percebe profissionalismo antes, durante e depois do evento.</h2>
+          <p>
+            A experiência digital ajuda a valorizar seu trabalho: do primeiro contato à entrega final, cada etapa passa mais segurança e cuidado.
+          </p>
+        </div>
+
+        <div class="experience-list reveal reveal-delay-1">
+          <div class="experience-item">
+            <i class="fa-solid fa-door-open"></i>
+            <div>
+              <h3>Área do cliente</h3>
+              <p>Acesso organizado para seleção, entrega, informações do trabalho e comunicação.</p>
+            </div>
+          </div>
+          <div class="experience-item">
+            <i class="fa-solid fa-eye"></i>
+            <div>
+              <h3>Visual elegante</h3>
+              <p>Galerias bonitas, leves e responsivas, sem deixar o cliente perdido em pastas.</p>
+            </div>
+          </div>
+          <div class="experience-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <h3>Controle e privacidade</h3>
+              <p>Acessos protegidos e dados separados por cliente, com regras pensadas para segurança.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="personalizacao" class="section customization-section">
+      <div class="container customization-card reveal">
+        <span class="eyebrow">100% personalizável</span>
+        <h2>Comece pequeno ou monte uma estrutura completa. O projeto acompanha o seu momento.</h2>
+        <p>
+          O Looping para Fotógrafos pode ser um site profissional simples, um sistema completo de gestão ou uma evolução em fases. A escolha dos módulos depende do que mais trava sua rotina hoje.
+        </p>
+        <div class="custom-tags">
+          <span>Portfólio</span>
+          <span>Agenda</span>
+          <span>Seleção</span>
+          <span>Entrega</span>
+          <span>Contratos</span>
+          <span>Financeiro</span>
+          <span>CRM</span>
+          <span>Blog</span>
+          <span>Admin</span>
+        </div>
+        <a href="#contato" class="btn btn-primary">Montar minha versão</a>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Vamos conversar</span>
+          <h2>Me conte como funciona sua fotografia hoje e quais módulos fariam diferença.</h2>
+          <p>
+            O formulário abre uma conversa no WhatsApp com as principais informações. Assim dá para entender se faz mais sentido começar pelo site, pela galeria, pela entrega ou por uma estrutura maior.
+          </p>
+        </div>
+
+        <form id="leadForm" class="contact-form reveal reveal-delay-1">
+          <input type="hidden" id="planoSelecionado" value="Projeto personalizável para fotógrafos" />
+
+          <div class="form-row">
+            <label for="nomeFoto">Nome</label>
+            <input type="text" id="nomeFoto" placeholder="Seu nome" required />
+          </div>
+
+          <div class="form-row">
+            <label for="whatsappFoto">WhatsApp</label>
+            <input type="tel" id="whatsappFoto" placeholder="(41) 99999-9999" required />
+          </div>
+
+          <div class="form-row">
+            <label for="tipoFoto">Tipo de fotografia</label>
+            <select id="tipoFoto">
+              <option value="">Selecione uma opção</option>
+              <option value="Casamento">Casamento</option>
+              <option value="Eventos">Eventos</option>
+              <option value="Ensaios">Ensaios</option>
+              <option value="Infantil">Infantil</option>
+              <option value="Newborn">Newborn</option>
+              <option value="Corporativo">Corporativo</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="modulosFoto">Módulos de interesse</label>
+            <select id="modulosFoto">
+              <option value="Ainda não sei, quero orientação">Ainda não sei, quero orientação</option>
+              <option value="Site + portfólio">Site + portfólio</option>
+              <option value="Seleção de fotos">Seleção de fotos</option>
+              <option value="Entrega final de fotos">Entrega final de fotos</option>
+              <option value="Agenda + contratos">Agenda + contratos</option>
+              <option value="Sistema completo">Sistema completo</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="mensagemFoto">Mensagem</label>
+            <textarea id="mensagemFoto" placeholder="Conte rapidamente o que você gostaria de organizar ou melhorar"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Chamar no WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Voltar para a página inicial">
+          <img src="looping_tecnologia-removebg-preview.png" alt="Looping Tecnologia" />
+        </a>
+        <p>Looping para Fotógrafos é uma solução da Looping Tecnologia para profissionalizar a presença digital e os processos de estúdios e fotógrafos.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navegação</h3>
+        <a href="index.html">Início</a>
+        <a href="#produto">Produto</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#experiencia">Experiência</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Módulos</h3>
+        <a href="#modulos">Galerias</a>
+        <a href="#modulos">Seleção de fotos</a>
+        <a href="#modulos">Entrega final</a>
+        <a href="#modulos">Contratos e agenda</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contato</h3>
+        <a href="mailto:loopingtecnologia@gmail.com"><i class="fa-solid fa-envelope"></i> loopingtecnologia@gmail.com</a>
+        <a href="https://wa.me/5541999722511" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> (41) 99972-2511</a>
+        <a href="https://instagram.com/loopingtecnologia" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @loopingtecnologia</a>
+      </div>
     </div>
-  </section>
 
-   <!-- PERSONALIZADO -->
-<section class="customizado">
-  <div class="container animate">
-    <h1>Ou você pode customizar seu projeto 100%</h1>
-    <h3>
-      Adicione quantos e quais módulos você quiser. De acordo com a <strong>sua necessidade</strong>
-    </h3>
-    <h3>
-      Fale com a gente e solicite um orçamento.
-    </h3>
-  </div>
-</section>
-
-  <!-- CTA FINAL -->
- <section class="cta" id="contato">
-  <div class="container">
-    <h2>Vamos criar seu site profissional</h2>
-    <p>Preencha abaixo e fale direto comigo no WhatsApp.</p>
-
-    <form id="leadForm" class="formulario">
-  <input type="hidden" id="planoSelecionado" value="Não informado">
-
-  <input type="text" id="nome" placeholder="Seu nome" required>
-  <input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
-
-  <select id="tipo">
-    <option value="">Tipo de fotografia</option>
-    <option value="Casamento">Casamento</option>
-    <option value="Eventos">Eventos</option>
-    <option value="Ensaios">Ensaios</option>
-    <option value="Infantil">Infantil</option>
-    <option value="Outros">Outros</option>
-  </select>
-
-  <textarea id="mensagem" placeholder="Conte rapidamente o que você precisa (opcional)"></textarea>
-
-  <button type="submit" class="btn">Quero meu site profissional</button>
-</form>
-
-  </div>
-</section>
-
-
-  <footer>
-    <p>© 2026 - Looping para Fotógrafos - Todos os Direitos Reservados</p>
+    <div class="container footer-bottom">
+      <p>© 2026 Looping Tecnologia — Todos os direitos reservados.</p>
+      <span>Produto modular para fotógrafos, estúdios e marcas criativas.</span>
+    </div>
   </footer>
 
-  <script>
-  const animated = document.querySelectorAll('.animate');
+  <a href="https://wa.me/5541999722511?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20Looping%20para%20Fot%C3%B3grafos%20e%20quero%20entender%20os%20m%C3%B3dulos." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  animated.forEach(el => {
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-  });
-</script>
-
-
-
-<script>
-  let planoAtual = "Não informado";
-
-  // Captura clique nos botões de plano
-  document.querySelectorAll("[data-plano]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      planoAtual = btn.dataset.plano;
-      document.getElementById("planoSelecionado").value = planoAtual;
-    });
-  });
-
-  // Envio do formulário para WhatsApp
-  document.getElementById("leadForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const nome = document.getElementById("nome").value;
-    const whatsapp = document.getElementById("whatsapp").value;
-    const tipo = document.getElementById("tipo").value;
-    const mensagem = document.getElementById("mensagem").value;
-    const plano = document.getElementById("planoSelecionado").value;
-
-    const numeroDestino = "5541999722511"; // <-- TROQUE AQUI
-
-    const texto = `
-Olá! Me chamo ${nome}.
-WhatsApp: ${whatsapp}
-Tipo de fotografia: ${tipo || "Não informado"}
-Plano de interesse: ${plano}
-
-Mensagem:
-${mensagem || "Gostaria de mais informações sobre o site profissional."}
-    `;
-
-    const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(texto)}`;
-    window.open(url, "_blank");
-  });
-</script>
-
-
-
-
+  <script src="script.js"></script>
 </body>
 </html>
