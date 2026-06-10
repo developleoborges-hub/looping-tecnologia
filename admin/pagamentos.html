@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pagamentos | Looping CRM</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a href="/admin/" class="admin-sidebar-brand">
+        <img src="../looping-tecnologia-texto-tecnologia-branco.png" alt="Looping Tecnologia" />
+        
+      </a>
+
+      <nav class="admin-nav">
+        <a href="/admin/">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/clientes.html">Clientes</a>
+        <a href="/admin/demandas.html">Demandas</a>
+        <a href="/admin/pagamentos.html" class="active">Pagamentos</a>
+        <a href="/">Ver site</a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user">
+          <small>Logado como</small>
+          <span id="adminUserEmail">Carregando...</span>
+        </div>
+
+        <button type="button" class="admin-button secondary" data-admin-logout>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">Financeiro</span>
+          <h1>Pagamentos</h1>
+          <p>
+            Controle mensalidades, cobranças extras, implantações e pagamentos avulsos dos clientes da Looping Tecnologia.
+          </p>
+        </div>
+
+        <button type="button" class="admin-button" id="togglePaymentFormButton">
+          Novo pagamento
+        </button>
+      </header>
+
+      <section class="admin-grid admin-payment-stats">
+        <article class="admin-stat-card">
+          <span>Previsto no mês</span>
+          <strong id="paymentsExpectedMonth">R$ 0,00</strong>
+        </article>
+
+        <article class="admin-stat-card">
+          <span>Recebido no mês</span>
+          <strong id="paymentsPaidMonth">R$ 0,00</strong>
+        </article>
+
+        <article class="admin-stat-card">
+          <span>Pendente</span>
+          <strong id="paymentsPendingTotal">R$ 0,00</strong>
+        </article>
+
+        <article class="admin-stat-card">
+          <span>Vencidos</span>
+          <strong id="paymentsOverdueTotal">R$ 0,00</strong>
+        </article>
+      </section>
+
+      <section class="admin-card admin-form-panel" id="paymentFormPanel">
+        <div class="admin-section-header">
+          <div>
+            <h2>Novo pagamento</h2>
+            <p>Registre uma mensalidade, taxa de implantação, cobrança extra ou pagamento avulso.</p>
+          </div>
+        </div>
+
+        <form id="paymentForm" class="admin-form admin-grid-form">
+          <div class="admin-field">
+            <label for="paymentClient">Cliente *</label>
+            <select id="paymentClient" required>
+              <option value="">Carregando clientes...</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentTitle">Descrição *</label>
+            <input type="text" id="paymentTitle" required placeholder="Ex: Mensalidade junho/2026" />
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentType">Tipo</label>
+            <select id="paymentType">
+              <option value="Mensalidade">Mensalidade</option>
+              <option value="Implantação">Implantação</option>
+              <option value="Cobrança extra">Cobrança extra</option>
+              <option value="Projeto avulso">Projeto avulso</option>
+              <option value="Manutenção">Manutenção</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentReferenceMonth">Mês de referência</label>
+            <input type="month" id="paymentReferenceMonth" />
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentAmount">Valor *</label>
+            <input type="text" id="paymentAmount" required placeholder="Ex: 199,00" />
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentDueDate">Vencimento *</label>
+            <input type="date" id="paymentDueDate" required />
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentStatus">Status</label>
+            <select id="paymentStatus">
+              <option value="pendente">Pendente</option>
+              <option value="pago">Pago</option>
+              <option value="atrasado">Atrasado</option>
+              <option value="cancelado">Cancelado</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentPaidDate">Data de pagamento</label>
+            <input type="date" id="paymentPaidDate" />
+          </div>
+
+          <div class="admin-field">
+            <label for="paymentMethod">Forma de pagamento</label>
+            <select id="paymentMethod">
+              <option value="">Não informado</option>
+              <option value="Pix">Pix</option>
+              <option value="Transferência">Transferência</option>
+              <option value="Boleto">Boleto</option>
+              <option value="Cartão">Cartão</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="admin-field admin-field-full">
+            <label for="paymentNotes">Observações</label>
+            <textarea id="paymentNotes" rows="4" placeholder="Anote comprovante, acordo, cobrança combinada, desconto ou qualquer detalhe importante."></textarea>
+          </div>
+
+          <div class="admin-form-actions admin-field-full">
+            <button type="submit" class="admin-button" data-save-payment-button>
+              Salvar pagamento
+            </button>
+
+            <button type="button" class="admin-button secondary" id="clearPaymentFormButton">
+              Limpar
+            </button>
+          </div>
+
+          <div id="paymentFormMessage" class="admin-message admin-field-full"></div>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-section-header">
+          <div>
+            <h2>Pagamentos cadastrados</h2>
+            <p>Acompanhe vencimentos, recebimentos e cobranças pendentes.</p>
+          </div>
+
+          <div class="admin-filter-row">
+            <input type="search" id="paymentSearchInput" placeholder="Buscar pagamento..." />
+
+            <select id="paymentClientFilter">
+              <option value="todos">Todos os clientes</option>
+            </select>
+
+            <select id="paymentStatusFilter">
+              <option value="todos">Todos os status</option>
+              <option value="pendente">Pendente</option>
+              <option value="pago">Pago</option>
+              <option value="atrasado">Atrasado</option>
+              <option value="cancelado">Cancelado</option>
+              <option value="vencido">Vencido automaticamente</option>
+            </select>
+
+            <input type="month" id="paymentMonthFilter" />
+          </div>
+        </div>
+
+        <div id="paymentsList" class="admin-list">
+          <div class="admin-empty">Carregando pagamentos...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+  <script type="module" src="/assets/js/admin-pagamentos.js"></script>
+</body>
+</html>

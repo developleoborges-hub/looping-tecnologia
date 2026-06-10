@@ -68,4 +68,7 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 
-.firebase/
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/

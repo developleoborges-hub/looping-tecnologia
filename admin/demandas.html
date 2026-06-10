@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Demandas | Looping CRM</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a href="/admin/" class="admin-sidebar-brand">
+        <img src="../looping-tecnologia-texto-tecnologia-branco.png" alt="Looping Tecnologia" />
+        
+      </a>
+
+      <nav class="admin-nav">
+        <a href="/admin/">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/clientes.html">Clientes</a>
+        <a href="/admin/demandas.html" class="active">Demandas</a>
+        <a href="/admin/pagamentos.html">Pagamentos</a>
+        <a href="/">Ver site</a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user">
+          <small>Logado como</small>
+          <span id="adminUserEmail">Carregando...</span>
+        </div>
+
+        <button type="button" class="admin-button secondary" data-admin-logout>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">Operação e suporte</span>
+          <h1>Demandas</h1>
+          <p>
+            Registre pedidos de alteração, suporte, melhorias, bugs, novas páginas,
+            ajustes visuais e tarefas combinadas com cada cliente.
+          </p>
+        </div>
+
+        <button type="button" class="admin-button" id="toggleDemandFormButton">
+          Nova demanda
+        </button>
+      </header>
+
+      <section class="admin-card admin-form-panel" id="demandFormPanel">
+        <div class="admin-section-header">
+          <div>
+            <h2>Nova demanda</h2>
+            <p>Cadastre tudo que precisa ser feito para um cliente, com status, prioridade e possível cobrança extra.</p>
+          </div>
+        </div>
+
+        <form id="demandForm" class="admin-form admin-grid-form">
+          <div class="admin-field">
+            <label for="demandClient">Cliente *</label>
+            <select id="demandClient" required>
+              <option value="">Carregando clientes...</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="demandTitle">Título da demanda *</label>
+            <input type="text" id="demandTitle" required placeholder="Ex: Ajustar formulário de contato" />
+          </div>
+
+          <div class="admin-field">
+            <label for="demandType">Tipo</label>
+            <select id="demandType">
+              <option value="Alteração">Alteração</option>
+              <option value="Bug">Bug</option>
+              <option value="Nova funcionalidade">Nova funcionalidade</option>
+              <option value="Conteúdo">Conteúdo</option>
+              <option value="Design">Design</option>
+              <option value="Suporte">Suporte</option>
+              <option value="Deploy / domínio">Deploy / domínio</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="demandPriority">Prioridade</label>
+            <select id="demandPriority">
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+              <option value="urgente">Urgente</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="demandStatus">Status</label>
+            <select id="demandStatus">
+              <option value="pendente">Pendente</option>
+              <option value="em_andamento">Em andamento</option>
+              <option value="concluida">Concluída</option>
+              <option value="pausada">Pausada</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="demandDueDate">Prazo combinado</label>
+            <input type="date" id="demandDueDate" />
+          </div>
+
+          <div class="admin-field">
+            <label for="demandBillable">Cobrança</label>
+            <select id="demandBillable">
+              <option value="nao">Sem cobrança extra</option>
+              <option value="sim">Com cobrança extra</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="demandExtraValue">Valor extra</label>
+            <input type="text" id="demandExtraValue" placeholder="Ex: 80,00" />
+          </div>
+
+          <div class="admin-field admin-field-full">
+            <label for="demandDescription">Descrição</label>
+            <textarea id="demandDescription" rows="4" placeholder="Descreva exatamente o que foi pedido, contexto, telas envolvidas e observações importantes."></textarea>
+          </div>
+
+          <div class="admin-field admin-field-full">
+            <label for="demandNotes">Notas internas</label>
+            <textarea id="demandNotes" rows="3" placeholder="Anote decisões, pendências, dificuldades técnicas, links ou próximos passos."></textarea>
+          </div>
+
+          <div class="admin-form-actions admin-field-full">
+            <button type="submit" class="admin-button" data-save-demand-button>
+              Salvar demanda
+            </button>
+
+            <button type="button" class="admin-button secondary" id="clearDemandFormButton">
+              Limpar
+            </button>
+          </div>
+
+          <div id="demandFormMessage" class="admin-message admin-field-full"></div>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-section-header">
+          <div>
+            <h2>Demandas cadastradas</h2>
+            <p>Acompanhe o que está pendente, em andamento ou concluído para cada cliente.</p>
+          </div>
+
+          <div class="admin-filter-row">
+            <input type="search" id="demandSearchInput" placeholder="Buscar demanda..." />
+
+            <select id="demandClientFilter">
+              <option value="todos">Todos os clientes</option>
+            </select>
+
+            <select id="demandStatusFilter">
+              <option value="todos">Todos os status</option>
+              <option value="pendente">Pendente</option>
+              <option value="em_andamento">Em andamento</option>
+              <option value="concluida">Concluída</option>
+              <option value="pausada">Pausada</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+
+            <select id="demandPriorityFilter">
+              <option value="todas">Todas as prioridades</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+              <option value="urgente">Urgente</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="demandsList" class="admin-list">
+          <div class="admin-empty">Carregando demandas...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+  <script type="module" src="/assets/js/admin-demandas.js"></script>
+</body>
+</html>

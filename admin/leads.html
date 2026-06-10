@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Leads | Looping CRM</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a href="/admin/" class="admin-sidebar-brand">
+        <img src="../looping-tecnologia-texto-tecnologia-branco.png" alt="Looping Tecnologia" />
+        
+      </a>
+
+      <nav class="admin-nav">
+        <a href="/admin/">Dashboard</a>
+        <a href="/admin/leads.html" class="active">Leads</a>
+        <a href="/admin/clientes.html">Clientes</a>
+        <a href="/admin/demandas.html">Demandas</a>
+        <a href="/admin/pagamentos.html">Pagamentos</a>
+        <a href="/">Ver site</a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user">
+          <small>Logado como</small>
+          <span id="adminUserEmail">Carregando...</span>
+        </div>
+
+        <button type="button" class="admin-button secondary" data-admin-logout>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">Comercial</span>
+          <h1>Leads</h1>
+          <p>
+            Cadastre oportunidades, acompanhe conversas e organize quem pode virar cliente da Looping Tecnologia.
+          </p>
+        </div>
+
+        <button type="button" class="admin-button" id="toggleLeadFormButton">
+          Novo lead
+        </button>
+      </header>
+
+      <section class="admin-card admin-form-panel" id="leadFormPanel">
+        <div class="admin-section-header">
+          <div>
+            <h2>Novo lead</h2>
+            <p>Use este formulário para cadastrar contatos vindos do WhatsApp, Instagram, indicação ou conversa direta.</p>
+          </div>
+        </div>
+
+        <form id="leadForm" class="admin-form admin-grid-form">
+          <div class="admin-field">
+            <label for="leadName">Nome do contato *</label>
+            <input type="text" id="leadName" required placeholder="Ex: Mariana Vieira" />
+          </div>
+
+          <div class="admin-field">
+            <label for="leadCompany">Empresa / Projeto</label>
+            <input type="text" id="leadCompany" placeholder="Ex: Mari Vieira Fotografia" />
+          </div>
+
+          <div class="admin-field">
+            <label for="leadEmail">E-mail</label>
+            <input type="email" id="leadEmail" placeholder="email@exemplo.com" />
+          </div>
+
+          <div class="admin-field">
+            <label for="leadPhone">WhatsApp / Telefone</label>
+            <input type="tel" id="leadPhone" placeholder="(41) 99999-9999" />
+          </div>
+
+          <div class="admin-field">
+            <label for="leadInterest">Interesse principal</label>
+            <select id="leadInterest">
+              <option value="Site institucional">Site institucional</option>
+              <option value="Sistema web">Sistema web</option>
+              <option value="Landing page">Landing page</option>
+              <option value="Looping para Fotógrafos">Looping para Fotógrafos</option>
+              <option value="ERP para Confeiteiros">ERP para Confeiteiros</option>
+              <option value="Gestor de RH">Gestor de RH</option>
+              <option value="Looping Links">Looping Links</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="leadSource">Origem</label>
+            <select id="leadSource">
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Formulário do site">Formulário do site</option>
+              <option value="Indicação">Indicação</option>
+              <option value="Cliente atual">Cliente atual</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="leadStatus">Status</label>
+            <select id="leadStatus">
+              <option value="novo">Novo</option>
+              <option value="em_atendimento">Em atendimento</option>
+              <option value="proposta_enviada">Proposta enviada</option>
+              <option value="aguardando_resposta">Aguardando resposta</option>
+              <option value="fechado">Fechado</option>
+              <option value="perdido">Perdido</option>
+            </select>
+          </div>
+
+          <div class="admin-field admin-field-full">
+            <label for="leadMessage">Observações / Mensagem</label>
+            <textarea id="leadMessage" rows="4" placeholder="Anote o que a pessoa pediu, valores conversados, contexto e próximos passos."></textarea>
+          </div>
+
+          <div class="admin-form-actions admin-field-full">
+            <button type="submit" class="admin-button" data-save-lead-button>
+              Salvar lead
+            </button>
+
+            <button type="button" class="admin-button secondary" id="clearLeadFormButton">
+              Limpar
+            </button>
+          </div>
+
+          <div id="leadFormMessage" class="admin-message admin-field-full"></div>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-section-header">
+          <div>
+            <h2>Leads cadastrados</h2>
+            <p>Altere o status conforme a conversa evoluir.</p>
+          </div>
+
+          <div class="admin-filter-row">
+            <input type="search" id="leadSearchInput" placeholder="Buscar lead..." />
+            <select id="leadStatusFilter">
+              <option value="todos">Todos</option>
+              <option value="novo">Novo</option>
+              <option value="em_atendimento">Em atendimento</option>
+              <option value="proposta_enviada">Proposta enviada</option>
+              <option value="aguardando_resposta">Aguardando resposta</option>
+              <option value="fechado">Fechado</option>
+              <option value="perdido">Perdido</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="leadsList" class="admin-list">
+          <div class="admin-empty">Carregando leads...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+  <script type="module" src="/assets/js/admin-leads.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dashboard Admin | Looping Tecnologia</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a href="/admin/" class="admin-sidebar-brand">
+        <img src="../looping-tecnologia-texto-tecnologia-branco.png" alt="Looping Tecnologia" />
+        
+      </a>
+
+      <nav class="admin-nav">
+        <a href="/admin/" class="active">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/clientes.html">Clientes</a>
+        <a href="/admin/demandas.html">Demandas</a>
+        <a href="/admin/pagamentos.html">Pagamentos</a>
+        <a href="/">Ver site</a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user">
+          <small>Logado como</small>
+          <span id="adminUserEmail">Carregando...</span>
+        </div>
+
+        <button type="button" class="admin-button secondary" data-admin-logout>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">CRM interno da Looping Tecnologia</span>
+          <h1>Dashboard</h1>
+          <p>
+            Visão geral dos leads, clientes, demandas e pagamentos da Looping Tecnologia.
+          </p>
+        </div>
+      </header>
+
+      <section class="admin-grid">
+        <article class="admin-stat-card">
+          <span>Leads novos</span>
+          <strong id="dashboardLeadsNew">0</strong>
+        </article>
+
+        <article class="admin-stat-card">
+          <span>Clientes ativos</span>
+          <strong id="dashboardClientsActive">0</strong>
+        </article>
+
+        <article class="admin-stat-card">
+          <span>Demandas abertas</span>
+          <strong id="dashboardDemandsOpen">0</strong>
+        </article>
+
+        <article class="admin-stat-card">
+          <span>Pagamentos pendentes</span>
+          <strong id="dashboardPaymentsPending">0</strong>
+        </article>
+      </section>
+
+      <section class="admin-content-grid dashboard-main-grid">
+        <article class="admin-card">
+          <div class="admin-section-header">
+            <div>
+              <h2>Resumo financeiro do mês</h2>
+              <p>Valores calculados a partir dos pagamentos cadastrados no mês selecionado.</p>
+            </div>
+
+            <input type="month" id="dashboardMonthFilter" class="admin-small-select" />
+          </div>
+
+          <div class="dashboard-money-grid">
+            <div>
+              <small>Previsto no mês</small>
+              <strong id="dashboardExpectedMonth">R$ 0,00</strong>
+            </div>
+
+            <div>
+              <small>Recebido no mês</small>
+              <strong id="dashboardPaidMonth">R$ 0,00</strong>
+            </div>
+
+            <div>
+              <small>Pendente total</small>
+              <strong id="dashboardPendingAmount">R$ 0,00</strong>
+            </div>
+
+            <div>
+              <small>Vencido total</small>
+              <strong id="dashboardOverdueAmount">R$ 0,00</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="admin-card">
+          <div class="admin-section-header">
+            <div>
+              <h2>Atalhos rápidos</h2>
+              <p>Ações mais comuns no dia a dia.</p>
+            </div>
+          </div>
+
+          <div class="admin-action-list">
+            <a href="/admin/leads.html" class="admin-action-item">
+              <strong>Novo lead</strong>
+              <span>Cadastrar oportunidade</span>
+            </a>
+
+            <a href="/admin/clientes.html" class="admin-action-item">
+              <strong>Novo cliente</strong>
+              <span>Cadastrar cliente ativo</span>
+            </a>
+
+            <a href="/admin/demandas.html" class="admin-action-item">
+              <strong>Nova demanda</strong>
+              <span>Registrar alteração ou suporte</span>
+            </a>
+
+            <a href="/admin/pagamentos.html" class="admin-action-item">
+              <strong>Novo pagamento</strong>
+              <span>Registrar cobrança</span>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="admin-content-grid dashboard-main-grid">
+        <article class="admin-card">
+          <div class="admin-section-header">
+            <div>
+              <h2>Últimos leads</h2>
+              <p>Contatos mais recentes cadastrados no CRM.</p>
+            </div>
+
+            <a href="/admin/leads.html" class="admin-mini-button">Ver todos</a>
+          </div>
+
+          <div id="dashboardRecentLeads" class="dashboard-list">
+            <div class="admin-empty">Carregando leads...</div>
+          </div>
+        </article>
+
+        <article class="admin-card">
+          <div class="admin-section-header">
+            <div>
+              <h2>Demandas prioritárias</h2>
+              <p>Demandas abertas com prioridade alta ou urgente.</p>
+            </div>
+
+            <a href="/admin/demandas.html" class="admin-mini-button">Ver todas</a>
+          </div>
+
+          <div id="dashboardPriorityDemands" class="dashboard-list">
+            <div class="admin-empty">Carregando demandas...</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-section-header">
+          <div>
+            <h2>Próximos vencimentos</h2>
+            <p>Pagamentos pendentes ou atrasados mais próximos.</p>
+          </div>
+
+          <a href="/admin/pagamentos.html" class="admin-mini-button">Ver pagamentos</a>
+        </div>
+
+        <div id="dashboardUpcomingPayments" class="dashboard-list">
+          <div class="admin-empty">Carregando pagamentos...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+  <script type="module" src="/assets/js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Login Admin | Looping Tecnologia</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <main class="admin-login-page">
+    <div class="admin-login-card">
+      <a href="/" class="admin-login-brand" aria-label="Voltar para o site da Looping Tecnologia">
+        <img src="/looping_tecnologia-removebg-preview.png" alt="Looping Tecnologia" />
+      </a>
+
+      <h1>Painel da Looping</h1>
+      <p>Entre para acompanhar leads, clientes, demandas, pagamentos e atualizações.</p>
+
+      <form id="adminLoginForm" class="admin-form">
+        <div class="admin-field">
+          <label for="adminEmail">E-mail</label>
+          <input
+            type="email"
+            id="adminEmail"
+            autocomplete="email"
+            placeholder="seuemail@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="admin-field">
+          <label for="adminPassword">Senha</label>
+          <input
+            type="password"
+            id="adminPassword"
+            autocomplete="current-password"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+
+        <button type="submit" class="admin-button" data-login-button>
+          Entrar no painel
+        </button>
+
+        <div id="adminAuthMessage" class="admin-message"></div>
+      </form>
+
+      <div class="admin-login-help">
+        <a href="/">← Voltar para o site</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+</body>
+</html>

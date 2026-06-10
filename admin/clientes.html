@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Clientes | Looping CRM</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a href="/admin/" class="admin-sidebar-brand">
+        <img src="../looping-tecnologia-texto-tecnologia-branco.png" alt="Looping Tecnologia" />
+        
+      </a>
+
+      <nav class="admin-nav">
+        <a href="/admin/">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/clientes.html" class="active">Clientes</a>
+        <a href="/admin/demandas.html">Demandas</a>
+        <a href="/admin/pagamentos.html">Pagamentos</a>
+        <a href="/">Ver site</a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user">
+          <small>Logado como</small>
+          <span id="adminUserEmail">Carregando...</span>
+        </div>
+
+        <button type="button" class="admin-button secondary" data-admin-logout>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">Relacionamento</span>
+          <h1>Clientes</h1>
+          <p>
+            Organize clientes ativos, projetos em implantação, mensalidades, vencimentos,
+            links publicados e observações importantes.
+          </p>
+        </div>
+
+        <button type="button" class="admin-button" id="toggleClientFormButton">
+          Novo cliente
+        </button>
+      </header>
+
+      <section class="admin-card admin-form-panel" id="clientFormPanel">
+        <div class="admin-section-header">
+          <div>
+            <h2>Novo cliente</h2>
+            <p>Cadastre clientes da Looping Tecnologia, separados dos clientes do Looping Links.</p>
+          </div>
+        </div>
+
+        <form id="clientForm" class="admin-form admin-grid-form">
+          <div class="admin-field">
+            <label for="clientName">Nome do cliente / empresa *</label>
+            <input type="text" id="clientName" required placeholder="Ex: Mari Vieira Fotografia" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientContact">Contato principal</label>
+            <input type="text" id="clientContact" placeholder="Ex: Mari Vieira" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientEmail">E-mail</label>
+            <input type="email" id="clientEmail" placeholder="email@exemplo.com" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientPhone">WhatsApp / Telefone</label>
+            <input type="tel" id="clientPhone" placeholder="(41) 99999-9999" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientProjectName">Nome do projeto</label>
+            <input type="text" id="clientProjectName" placeholder="Ex: Site Mari Vieira V2" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientProjectType">Tipo de projeto</label>
+            <select id="clientProjectType">
+              <option value="Site institucional">Site institucional</option>
+              <option value="Sistema web">Sistema web</option>
+              <option value="Site + sistema">Site + sistema</option>
+              <option value="ERP">ERP</option>
+              <option value="Landing page">Landing page</option>
+              <option value="Manutenção recorrente">Manutenção recorrente</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="clientStatus">Status</label>
+            <select id="clientStatus">
+              <option value="implantacao">Em implantação</option>
+              <option value="ativo">Ativo</option>
+              <option value="pausado">Pausado</option>
+              <option value="encerrado">Encerrado</option>
+            </select>
+          </div>
+
+          <div class="admin-field">
+            <label for="clientMonthlyValue">Mensalidade</label>
+            <input type="text" id="clientMonthlyValue" placeholder="Ex: 199,00" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientDueDay">Dia de vencimento</label>
+            <input type="number" id="clientDueDay" min="1" max="31" placeholder="Ex: 10" />
+          </div>
+
+          <div class="admin-field">
+            <label for="clientStartDate">Data de entrada</label>
+            <input type="date" id="clientStartDate" />
+          </div>
+
+          <div class="admin-field admin-field-full">
+            <label for="clientProjectUrl">Link do projeto publicado</label>
+            <input type="url" id="clientProjectUrl" placeholder="https://..." />
+          </div>
+
+          <div class="admin-field admin-field-full">
+            <label for="clientNotes">Observações</label>
+            <textarea id="clientNotes" rows="4" placeholder="Anote contrato, combinados, módulos inclusos, suporte, pendências ou histórico importante."></textarea>
+          </div>
+
+          <div class="admin-form-actions admin-field-full">
+            <button type="submit" class="admin-button" data-save-client-button>
+              Salvar cliente
+            </button>
+
+            <button type="button" class="admin-button secondary" id="clearClientFormButton">
+              Limpar
+            </button>
+          </div>
+
+          <div id="clientFormMessage" class="admin-message admin-field-full"></div>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-section-header">
+          <div>
+            <h2>Clientes cadastrados</h2>
+            <p>Acompanhe sua base ativa, projetos pausados e implantações em andamento.</p>
+          </div>
+
+          <div class="admin-filter-row">
+            <input type="search" id="clientSearchInput" placeholder="Buscar cliente..." />
+            <select id="clientStatusFilter">
+              <option value="todos">Todos</option>
+              <option value="implantacao">Em implantação</option>
+              <option value="ativo">Ativo</option>
+              <option value="pausado">Pausado</option>
+              <option value="encerrado">Encerrado</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="clientsList" class="admin-list">
+          <div class="admin-empty">Carregando clientes...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+  <script type="module" src="/assets/js/admin-clientes.js"></script>
+</body>
+</html>

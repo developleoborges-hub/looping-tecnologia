@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Detalhes do Cliente | Looping CRM</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#070816" />
+
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a href="/admin/" class="admin-sidebar-brand">
+        <img src="../looping-tecnologia-texto-tecnologia-branco.png" alt="Looping Tecnologia" />
+        
+      </a>
+
+      <nav class="admin-nav">
+        <a href="/admin/">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/clientes.html" class="active">Clientes</a>
+        <a href="/admin/demandas.html">Demandas</a>
+        <a href="/admin/pagamentos.html">Pagamentos</a>
+        <a href="/">Ver site</a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user">
+          <small>Logado como</small>
+          <span id="adminUserEmail">Carregando...</span>
+        </div>
+
+        <button type="button" class="admin-button secondary" data-admin-logout>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">Cliente</span>
+          <h1 id="clientPageTitle">Carregando cliente...</h1>
+          <p id="clientPageSubtitle">
+            Edite informações comerciais, dados do projeto, mensalidade e observações internas.
+          </p>
+        </div>
+
+        <div class="admin-detail-actions">
+          <a href="/admin/clientes.html" class="admin-button secondary">
+            Voltar
+          </a>
+        </div>
+      </header>
+
+      <section class="admin-detail-grid">
+        <article class="admin-card">
+          <div class="admin-section-header">
+            <div>
+              <h2>Resumo</h2>
+              <p>Informações rápidas do cliente.</p>
+            </div>
+          </div>
+
+          <div class="admin-detail-summary">
+            <div>
+              <small>Status</small>
+              <strong id="clientSummaryStatus">—</strong>
+            </div>
+
+            <div>
+              <small>Mensalidade</small>
+              <strong id="clientSummaryMonthly">—</strong>
+            </div>
+
+            <div>
+              <small>Vencimento</small>
+              <strong id="clientSummaryDueDay">—</strong>
+            </div>
+
+            <div>
+              <small>Tipo de projeto</small>
+              <strong id="clientSummaryProjectType">—</strong>
+            </div>
+          </div>
+
+          <div class="admin-action-list">
+            <a href="#" id="clientWhatsappLink" class="admin-action-item is-hidden" target="_blank" rel="noopener">
+              <strong>Abrir WhatsApp</strong>
+              <span>Falar com o contato principal</span>
+            </a>
+
+            <a href="#" id="clientProjectLink" class="admin-action-item is-hidden" target="_blank" rel="noopener">
+              <strong>Abrir projeto</strong>
+              <span>Ver site ou sistema publicado</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="admin-card">
+          <div class="admin-section-header">
+            <div>
+              <h2>Editar cliente</h2>
+              <p>Atualize as informações sempre que o projeto evoluir.</p>
+            </div>
+          </div>
+
+          <form id="clientEditForm" class="admin-form admin-grid-form">
+            <div class="admin-field">
+              <label for="clientName">Nome do cliente / empresa *</label>
+              <input type="text" id="clientName" required />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientContact">Contato principal</label>
+              <input type="text" id="clientContact" />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientEmail">E-mail</label>
+              <input type="email" id="clientEmail" />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientPhone">WhatsApp / Telefone</label>
+              <input type="tel" id="clientPhone" />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientProjectName">Nome do projeto</label>
+              <input type="text" id="clientProjectName" />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientProjectType">Tipo de projeto</label>
+              <select id="clientProjectType">
+                <option value="Site institucional">Site institucional</option>
+                <option value="Sistema web">Sistema web</option>
+                <option value="Site + sistema">Site + sistema</option>
+                <option value="ERP">ERP</option>
+                <option value="Landing page">Landing page</option>
+                <option value="Manutenção recorrente">Manutenção recorrente</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="admin-field">
+              <label for="clientStatus">Status</label>
+              <select id="clientStatus">
+                <option value="implantacao">Em implantação</option>
+                <option value="ativo">Ativo</option>
+                <option value="pausado">Pausado</option>
+                <option value="encerrado">Encerrado</option>
+              </select>
+            </div>
+
+            <div class="admin-field">
+              <label for="clientMonthlyValue">Mensalidade</label>
+              <input type="text" id="clientMonthlyValue" placeholder="Ex: 199,00" />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientDueDay">Dia de vencimento</label>
+              <input type="number" id="clientDueDay" min="1" max="31" />
+            </div>
+
+            <div class="admin-field">
+              <label for="clientStartDate">Data de entrada</label>
+              <input type="date" id="clientStartDate" />
+            </div>
+
+            <div class="admin-field admin-field-full">
+              <label for="clientProjectUrl">Link do projeto publicado</label>
+              <input type="url" id="clientProjectUrl" placeholder="https://..." />
+            </div>
+
+            <div class="admin-field admin-field-full">
+              <label for="clientNotes">Observações internas</label>
+              <textarea id="clientNotes" rows="6"></textarea>
+            </div>
+
+            <div class="admin-form-actions admin-field-full">
+              <button type="submit" class="admin-button" data-save-client-edit-button>
+                Salvar alterações
+              </button>
+
+              <a href="/admin/clientes.html" class="admin-button secondary">
+                Cancelar
+              </a>
+            </div>
+
+            <div id="clientEditMessage" class="admin-message admin-field-full"></div>
+          </form>
+        </article>
+      </section>
+
+      <section class="admin-card admin-client-demands-section">
+  <div class="admin-section-header">
+    <div>
+      <h2>Demandas deste cliente</h2>
+      <p>
+        Acompanhe alterações, suporte, melhorias, bugs e pedidos vinculados a este cliente.
+      </p>
+    </div>
+
+    <div class="admin-section-actions">
+      <select id="clientDemandsStatusFilter" class="admin-small-select">
+        <option value="todos">Todos os status</option>
+        <option value="pendente">Pendente</option>
+        <option value="em_andamento">Em andamento</option>
+        <option value="concluida">Concluída</option>
+        <option value="pausada">Pausada</option>
+        <option value="cancelada">Cancelada</option>
+      </select>
+
+      <a href="/admin/demandas.html" class="admin-mini-button">
+        Nova demanda
+      </a>
+    </div>
+  </div>
+
+  <div id="clientDemandsList" class="admin-list">
+    <div class="admin-empty">Carregando demandas do cliente...</div>
+  </div>
+</section>
+
+<section class="admin-card admin-client-payments-section">
+  <div class="admin-section-header">
+    <div>
+      <h2>Pagamentos deste cliente</h2>
+      <p>
+        Acompanhe mensalidades, cobranças extras, pagamentos pendentes, pagos e vencidos.
+      </p>
+    </div>
+
+    <div class="admin-section-actions">
+      <select id="clientPaymentsStatusFilter" class="admin-small-select">
+        <option value="todos">Todos os status</option>
+        <option value="pendente">Pendente</option>
+        <option value="pago">Pago</option>
+        <option value="atrasado">Atrasado</option>
+        <option value="cancelado">Cancelado</option>
+        <option value="vencido">Vencido automaticamente</option>
+      </select>
+
+      <input type="month" id="clientPaymentsMonthFilter" class="admin-small-select" />
+
+      <a href="/admin/pagamentos.html" class="admin-mini-button">
+        Novo pagamento
+      </a>
+    </div>
+  </div>
+
+  <div class="admin-client-finance-grid">
+    <div>
+      <small>Recebido no mês</small>
+      <strong id="clientPaymentsPaidMonth">R$ 0,00</strong>
+    </div>
+
+    <div>
+      <small>Pendente total</small>
+      <strong id="clientPaymentsPendingTotal">R$ 0,00</strong>
+    </div>
+
+    <div>
+      <small>Vencido total</small>
+      <strong id="clientPaymentsOverdueTotal">R$ 0,00</strong>
+    </div>
+  </div>
+
+  <div id="clientPaymentsList" class="admin-list">
+    <div class="admin-empty">Carregando pagamentos do cliente...</div>
+  </div>
+</section>
+
+    </main>
+  </div>
+
+  <script type="module" src="/assets/js/admin-auth.js"></script>
+  <script type="module" src="/assets/js/admin-cliente.js"></script>
+</body>
+</html>
