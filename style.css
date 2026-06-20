@@ -626,6 +626,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.project-icon-links{
+  width:auto;
+  margin-top:-15px;
+
+}
+
 .feature-card h3,
 .module-card h3,
 .pain-card h3 {

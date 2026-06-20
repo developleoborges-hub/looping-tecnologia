@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projeto-erp-confeiteiros.css" />
   <link rel="canonical" href="https://loopingtecnologia.com.br/projeto-erp-confeiteiros.html" />
 
   <meta name="theme-color" content="#11162f" />
@@ -58,171 +59,262 @@
   </header>
 
   <main>
-    <section class="hero hero-home section-glow">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
+    <section class="erp-hero section-glow">
+      <div class="container erp-hero-grid">
+        <div class="erp-hero-copy reveal">
           <span class="eyebrow"><i class="fa-solid fa-cake-candles"></i> ERP Confeiteiros</span>
-          <h1>Um sistema para transformar confeitaria artesanal em operação organizada.</h1>
+          <h1>Um sistema real para organizar pedidos, clientes, produtos, financeiro e fiscal da confeitaria.</h1>
           <p>
-            O ERP Confeiteiros é uma proposta de sistema modular para docerias, confeitarias e produções artesanais que precisam controlar pedidos, clientes, estoque, receitas, produção, financeiro e rotina sem depender de planilhas soltas.
+            Uma base digital modular para confeitarias que precisam sair do improviso: menos planilhas soltas, menos informação perdida no WhatsApp e mais clareza para vender, produzir e acompanhar o resultado.
           </p>
+
           <div class="hero-actions">
-            <a href="#modulos" class="btn btn-primary">Ver módulos possíveis</a>
+            <a href="#modulos-reais" class="btn btn-primary">Ver módulos com mockups</a>
             <a href="#contato" class="btn btn-ghost">Quero algo parecido</a>
           </div>
-          <div class="hero-badges" aria-label="Principais benefícios">
-            <span><i class="fa-solid fa-boxes-stacked"></i> Estoque</span>
-            <span><i class="fa-solid fa-clipboard-list"></i> Pedidos</span>
-            <span><i class="fa-solid fa-chart-line"></i> Financeiro</span>
+
+          <div class="erp-hero-metrics" aria-label="Resumo do projeto">
+            <span><strong>4+</strong> módulos centrais</span>
+            <span><strong>100%</strong> sob medida</span>
+            <span><strong>Web</strong> desktop e mobile</span>
           </div>
         </div>
 
-        <div class="hero-panel reveal reveal-delay-1" aria-label="Demonstração visual do projeto">
-          <div class="orbit-card orbit-card-one">
-            <i class="fa-solid fa-kitchen-set"></i>
-            <strong>Produção clara</strong>
-            <span>pedidos, receitas e etapas em uma visão simples.</span>
-          </div>
-          <div class="hero-device">
-            <div class="device-topbar">
+        <div class="erp-hero-showcase reveal reveal-delay-1" aria-label="Mockups do ERP Confeiteiros">
+          <div class="erp-orb erp-orb-one"></div>
+          <div class="erp-orb erp-orb-two"></div>
+
+          <figure class="erp-device erp-device-desktop erp-hero-desktop">
+            <div class="erp-device-bar">
               <span></span><span></span><span></span>
             </div>
-            <div class="device-content">
-              <div class="device-line w-80"></div>
-              <div class="device-line w-55"></div>
-              <div class="device-cards">
-                <div></div><div></div><div></div>
-              </div>
-              <div class="device-chart">
-                <span style="height: 44%"></span>
-                <span style="height: 68%"></span>
-                <span style="height: 56%"></span>
-                <span style="height: 88%"></span>
-              </div>
+            <div class="erp-screen erp-screen-placeholder erp-dashboard-preview">
+              <img class="imagem-celular-inicio" src="/prints/erp-print-inicio-desktop.png">
             </div>
+          </figure>
+
+          <figure class="erp-device erp-device-phone erp-hero-phone">
+            <div class="erp-phone-notch"></div>
+            <div class="erp-screen erp-screen-placeholder erp-phone-preview">
+              <img src="/prints/erp-print-inicio-mobile.jpeg">
+            </div>
+          </figure>
+
+          <div class="erp-floating-note erp-note-one">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>visão rápida da operação</span>
           </div>
-          <div class="orbit-card orbit-card-two">
-            <i class="fa-solid fa-scale-balanced"></i>
-            <strong>Custo e margem</strong>
-            <span>mais clareza para preço, estoque e resultado.</span>
+
+          <div class="erp-floating-note erp-note-two">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>acesso seguro e organizado</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section about-section">
-      <div class="container two-column">
+    <section class="section erp-context-section">
+      <div class="container two-column align-center">
         <div class="section-heading reveal">
-          <span class="eyebrow">O problema</span>
-          <h2>Quando a confeitaria cresce, WhatsApp e caderno começam a cobrar juros.</h2>
+          <span class="eyebrow">Sistema sob medida</span>
+          <h2>O ERP nasce da rotina real da confeitaria, não de uma tela genérica.</h2>
         </div>
         <div class="section-text reveal reveal-delay-1">
           <p>
-            No começo, anotar pedido no WhatsApp, controlar ingredientes no olho e fazer conta em planilha parece suficiente. Mas quando chegam encomendas, revendas, produtos prontos e datas de entrega, a operação fica pesada.
+            Cada módulo pode ser pensado para o jeito que o negócio trabalha: encomendas, pronta entrega, revenda, retirada na loja, entregas, produção por lote, controle de estoque, relatórios e apoio fiscal.
           </p>
           <p>
-            A ideia do ERP Confeiteiros é centralizar o fluxo em uma plataforma com linguagem simples: o que entrou, o que precisa produzir, o que saiu do estoque, quanto custou e quanto sobrou.
+            A proposta é construir uma ferramenta simples de usar no dia a dia, mas forte o suficiente para acompanhar o crescimento da operação.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="modulos" class="section darker-section">
+    <section id="modulos-reais" class="section darker-section erp-modules-overview">
       <div class="container">
         <div class="section-heading centered reveal">
-          <span class="eyebrow">Módulos possíveis</span>
-          <h2>Começa com o essencial e evolui para um ERP completo.</h2>
-          <p>O sistema pode ser montado por etapas, de acordo com a maturidade da confeitaria.</p>
-        </div>
-
-        <div class="module-grid">
-          <article class="module-card reveal">
-            <div class="icon-bubble"><i class="fa-solid fa-bag-shopping"></i></div>
-            <h3>Pedidos e encomendas</h3>
-            <p>Cadastro de pedidos, status, data de entrega, cliente, itens, observações e histórico da venda.</p>
-          </article>
-
-          <article class="module-card reveal reveal-delay-1">
-            <div class="icon-bubble"><i class="fa-solid fa-users"></i></div>
-            <h3>Clientes e revendedores</h3>
-            <p>Base de clientes com contatos, histórico de compras, preferências e identificação de compradores recorrentes.</p>
-          </article>
-
-          <article class="module-card reveal reveal-delay-2">
-            <div class="icon-bubble"><i class="fa-solid fa-cookie-bite"></i></div>
-            <h3>Produtos e receitas</h3>
-            <p>Ficha técnica, ingredientes, rendimento, custo estimado e vínculo entre produto vendido e receita utilizada.</p>
-          </article>
-
-          <article class="module-card reveal">
-            <div class="icon-bubble"><i class="fa-solid fa-warehouse"></i></div>
-            <h3>Estoque de insumos</h3>
-            <p>Controle de entrada, baixa automática por produção, alerta de estoque mínimo e custo unitário por ingrediente.</p>
-          </article>
-
-          <article class="module-card reveal reveal-delay-1">
-            <div class="icon-bubble"><i class="fa-solid fa-calendar-check"></i></div>
-            <h3>Produção do dia</h3>
-            <p>Lista organizada do que precisa ser feito, separada por data, pedido, produto e prioridade.</p>
-          </article>
-
-          <article class="module-card reveal reveal-delay-2">
-            <div class="icon-bubble"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-            <h3>Financeiro e fiscal</h3>
-            <p>Entradas, custos, margem, resumo mensal e campos de apoio para emissão ou controle manual de notas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process-section">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">Fluxo de uso</span>
-          <h2>Um pedido entra e o sistema ajuda a organizar o restante.</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <span>01</span>
-            <h3>Cadastro do pedido</h3>
-            <p>Cliente, data, produtos, valores, observações e status inicial.</p>
-          </div>
-          <div class="timeline-item reveal reveal-delay-1">
-            <span>02</span>
-            <h3>Separação da produção</h3>
-            <p>O sistema mostra o que precisa ser produzido por data e prioridade.</p>
-          </div>
-          <div class="timeline-item reveal reveal-delay-2">
-            <span>03</span>
-            <h3>Baixa de estoque</h3>
-            <p>Ingredientes podem ser abatidos com base nas receitas cadastradas.</p>
-          </div>
-          <div class="timeline-item reveal reveal-delay-3">
-            <span>04</span>
-            <h3>Resultado financeiro</h3>
-            <p>Resumo de vendas, custos, margem e indicadores da operação.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section clients-section">
-      <div class="container">
-        <div class="customization-card reveal">
-          <span class="eyebrow">Personalização</span>
-          <h2>Não precisa nascer gigante. Precisa nascer útil.</h2>
+          <span class="eyebrow">Módulos</span>
+          <h2>Veja na prática como cada módulo pode ser</h2>
           <p>
-            A primeira versão pode focar só em pedidos, clientes e estoque. Depois entram receitas, produção, financeiro, fiscal, relatórios e painéis mais avançados.
+Veja por meio destas imagens os visuais dos módulos mais importantes e, lembre-se: é você quem escolhe como vai ser o visual e a funcionalidade</p>
+        </div>
+
+        <div class="erp-module-nav reveal reveal-delay-1" aria-label="Navegação pelos módulos do ERP">
+          <a href="#erp-clientes"><i class="fa-solid fa-users"></i> Clientes</a>
+          <a href="#erp-produtos"><i class="fa-solid fa-cookie-bite"></i> Produtos</a>
+          <a href="#erp-financeiro"><i class="fa-solid fa-chart-pie"></i> Financeiro</a>
+          <a href="#erp-fiscal"><i class="fa-solid fa-file-invoice"></i> Fiscal</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="erp-clientes" class="section erp-module-section erp-module-section-clientes">
+      <div class="container erp-module-row">
+        <div class="erp-module-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-users"></i> Módulo Clientes</span>
+          <h2>Histórico, contatos e compras em uma base única.</h2>
+          <p>
+            O módulo de clientes centraliza informações importantes para atendimento e recorrência: dados de contato, preferências, histórico de pedidos, observações e relacionamento com revendedores.
           </p>
+
+          <ul class="erp-feature-list">
+            <li><i class="fa-solid fa-check"></i> Cadastro completo com telefone, e-mail e observações.</li>
+            <li><i class="fa-solid fa-check"></i> Histórico de pedidos e última compra.</li>
+            <li><i class="fa-solid fa-check"></i> Busca rápida por nome, telefone ou perfil de cliente.</li>
+          </ul>
+        </div>
+
+        <div class="erp-mockup-pair reveal reveal-delay-1">
+          <figure class="erp-device erp-device-desktop">
+            <div class="erp-device-label"></div>
+            <div class="erp-device-bar"><span></span><span></span><span></span></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-clientes-desktop.png" alt="Tela desktop do módulo de clientes" loading="lazy" /> -->
+              <img src="/prints/erp-clientes-desktop.png" alt="Tela desktop do módulo de clientes" loading="lazy" />
+            </div>
+          </figure>
+
+          <figure class="erp-device erp-device-phone">
+            <div class="erp-phone-notch"></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-clientes-mobile.png" alt="Tela mobile do módulo de clientes" loading="lazy" /> -->
+              <img src="/prints/erp-clientes-mobile.jpeg" alt="Tela mobile do módulo de clientes" loading="lazy" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="erp-produtos" class="section darker-section erp-module-section erp-module-section-produtos">
+      <div class="container erp-module-row erp-module-row-reverse">
+        <div class="erp-module-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-cookie-bite"></i> Módulo Produtos</span>
+          <h2>Produtos, fichas técnicas e controle de custo mais claros.</h2>
+          <p>
+            O módulo de produtos ajuda a organizar o catálogo da confeitaria, padronizar informações e criar uma base para cálculo de custo, preço, estoque e produção.
+          </p>
+
+          <ul class="erp-feature-list">
+            <li><i class="fa-solid fa-check"></i> Cadastro de produtos com categorias, SKU e dados comerciais.</li>
+            <li><i class="fa-solid fa-check"></i> Vínculo com receitas, ingredientes e rendimento.</li>
+            <li><i class="fa-solid fa-check"></i> Apoio para etiquetas, estoque e padronização da operação.</li>
+          </ul>
+        </div>
+
+        <div class="erp-mockup-pair reveal reveal-delay-1">
+          <figure class="erp-device erp-device-desktop">
+            <div class="erp-device-label"></div>
+            <div class="erp-device-bar"><span></span><span></span><span></span></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-produtos-desktop.png" alt="Tela desktop do módulo de produtos" loading="lazy" /> -->
+              <img src="/prints/erp-produtos-desktop.png" alt="Tela desktop do módulo de produtos" loading="lazy" />
+            </div>
+          </figure>
+
+          <figure class="erp-device erp-device-phone">
+            <div class="erp-phone-notch"></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-produtos-mobile.png" alt="Tela mobile do módulo de produtos" loading="lazy" /> -->
+              <img src="/prints/erp-produtos-mobile.jpeg" alt="Tela mobile do módulo de produtos" loading="lazy" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="erp-financeiro" class="section erp-module-section erp-module-section-financeiro">
+      <div class="container erp-module-row">
+        <div class="erp-module-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-chart-pie"></i> Módulo Financeiro</span>
+          <h2>Entradas, custos, margem e visão mensal da confeitaria.</h2>
+          <p>
+            O financeiro pode começar simples, registrando entradas e saídas, e evoluir para indicadores de margem, resumo mensal, pagamentos pendentes e relatórios para tomada de decisão.
+          </p>
+
+          <ul class="erp-feature-list">
+            <li><i class="fa-solid fa-check"></i> Visão de receitas, despesas e resultado por período.</li>
+            <li><i class="fa-solid fa-check"></i> Controle de pedidos pagos, pendentes e vencidos.</li>
+            <li><i class="fa-solid fa-check"></i> Base para DRE simples e relatórios em PDF.</li>
+          </ul>
+        </div>
+
+        <div class="erp-mockup-pair reveal reveal-delay-1">
+          <figure class="erp-device erp-device-desktop">
+            <div class="erp-device-label"></div>
+            <div class="erp-device-bar"><span></span><span></span><span></span></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-financeiro-desktop.png" alt="Tela desktop do módulo financeiro" loading="lazy" /> -->
+              <img src="/prints/erp-financeiro-desktop.png" alt="Tela desktop do módulo financeiro" loading="lazy" />
+            </div>
+          </figure>
+
+          <figure class="erp-device erp-device-phone">
+            <div class="erp-phone-notch"></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-financeiro-mobile.png" alt="Tela mobile do módulo financeiro" loading="lazy" /> -->
+            <img src="/prints/erp-financeiro-mobile.jpeg" alt="Tela mobile do módulo financeiro" loading="lazy" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="erp-fiscal" class="section darker-section erp-module-section erp-module-section-fiscal">
+      <div class="container erp-module-row erp-module-row-reverse">
+        <div class="erp-module-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-file-invoice"></i> Módulo Fiscal</span>
+          <h2>Informações fiscais organizadas para reduzir retrabalho.</h2>
+          <p>
+            O fiscal pode apoiar o cadastro de produtos, NCM, observações, resumo de valores e links úteis para conferência, deixando a confeitaria mais preparada para processos formais.
+          </p>
+
+          <ul class="erp-feature-list">
+            <li><i class="fa-solid fa-check"></i> Campos fiscais no cadastro de produtos.</li>
+            <li><i class="fa-solid fa-check"></i> Resumos de apoio para conferência manual.</li>
+            <li><i class="fa-solid fa-check"></i> Estrutura que pode evoluir para integrações futuras.</li>
+          </ul>
+        </div>
+
+        <div class="erp-mockup-pair reveal reveal-delay-1">
+          <figure class="erp-device erp-device-desktop">
+            <div class="erp-device-label"></div>
+            <div class="erp-device-bar"><span></span><span></span><span></span></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-fiscal-desktop.png" alt="Tela desktop do módulo fiscal" loading="lazy" /> -->
+              <img src="/prints/erp-fiscal-desktop.png" alt="Tela desktop do módulo fiscal" loading="lazy" />
+            </div>
+          </figure>
+
+          <figure class="erp-device erp-device-phone">
+            <div class="erp-phone-notch"></div>
+            <div class="erp-screen erp-screen-placeholder">
+              <!-- Para usar print real, substitua este conteúdo por: <img src="prints/erp-fiscal-mobile.png" alt="Tela mobile do módulo fiscal" loading="lazy" /> -->
+              <img src="/prints/erp-fiscal-mobile.jpeg" alt="Tela mobile do módulo fiscal" loading="lazy" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section erp-real-examples-section">
+      <div class="container">
+        <div class="erp-real-card reveal">
+          <span class="eyebrow">Exemplos reais, projeto personalizável</span>
+          <h2>Essas telas servem como referência. O sistema final pode mudar completamente de acordo com a sua necessidade.</h2>
+          <p>
+            Os módulos apresentados representam exemplos reais de uma operação de confeitaria, mas a Looping pode adaptar nomes, campos, etapas, permissões, relatórios, telas, regras de negócio e integrações para cada empresa.
+          </p>
+
           <div class="custom-tags">
-            <span>Pedidos</span>
-            <span>Receitas</span>
-            <span>Estoque</span>
-            <span>Produção</span>
-            <span>Financeiro</span>
-            <span>Fiscal</span>
+            <span>Campos personalizados</span>
+            <span>Fluxos sob medida</span>
+            <span>Relatórios específicos</span>
+            <span>Painel responsivo</span>
+            <span>Novos módulos</span>
+            <span>Manutenção contínua</span>
           </div>
+
+          <a href="#contato" class="btn btn-primary">Quero adaptar para meu negócio</a>
         </div>
       </div>
     </section>
@@ -233,7 +325,7 @@
           <span class="eyebrow"><i class="fa-brands fa-whatsapp"></i> Próximo passo</span>
           <h2>Quer entender como isso poderia funcionar no seu negócio?</h2>
           <p>
-            Essa página mostra uma visão de possibilidades. A proposta final pode ser montada de forma modular, começando simples e evoluindo conforme a operação amadurece.
+            A proposta pode começar por um módulo simples e evoluir aos poucos. O importante é mapear a rotina real da operação antes de transformar tudo em tela.
           </p>
           <div class="contact-highlights">
             <span><i class="fa-solid fa-puzzle-piece"></i> Módulos personalizáveis</span>
@@ -246,7 +338,7 @@
           <span class="eyebrow">Vamos conversar</span>
           <h2>Me conte sua ideia e eu organizo o caminho possível.</h2>
           <p>
-            A Looping pode adaptar esse conceito para uma versão mais enxuta, uma versão completa ou um projeto totalmente sob medida.
+            A Looping pode adaptar esse conceito para uma versão mais enxuta, uma versão completa ou um projeto totalmente sob medida para outro tipo de negócio.
           </p>
           <div class="custom-tags">
             <span>Diagnóstico inicial</span>
@@ -261,6 +353,7 @@
       </div>
     </section>
   </main>
+
 
   <footer class="site-footer">
     <div class="container footer-grid">
